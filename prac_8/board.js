@@ -1,17 +1,21 @@
 "use strict";
 
-function butotnClick() {
+const item = document.getElementById("addItem");
+const list = document.getElementById("list");
+
+function prepend() {
+
     let name = document.getElementById("name");
-    msg.innerText = name.value + ":" + reviewTextarea.value;
+    const createElement = document.createElement("li");
+
+    createElement.setAttribute("class", "blueText");
+
+    createElement.textContent = name.value + ":" + item.value;
+
+    list.prepend(createElement);
 }
-let reviewTextarea = document.getElementById('reviewTextarea');
-let msg = document.getElementById('msg');
 
 let checkButton = document.getElementById('checkButton');
 checkButton.addEventListener('click', butotnClick);
 
-function value() {
-    let value = document.getElementById("value").value;
-    values.push(value);
-}
 
